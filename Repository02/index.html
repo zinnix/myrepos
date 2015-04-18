@@ -1,89 +1,85 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <body>
 
 
-<p>What is your name?</p>
-<input id="Name" value="noname" />
-<button onclick="detectname()">Check name</button>
-<p id="demo5"><font color=grey>This content will be replaced</font></p>
-<script>
-  function detectname() {
-    var yourname;
-    yourname=document.getElementById("Name").value=="John"?"Yes":"No";
-    document.getElementById("demo5").innerHTML = "<b>" + yourname + " is you.</b>";
-  }
-</script>
-
-
-
-<p>Input your age and click the button [default:40]:</p>
-Enter your age: 
-<input type="number" id="age" value="40" />years old <button onclick="myFunction()">check age</button>
-<p id="demo4"><font color=grey>This content will be replaced</font></p>
-<script>
-  function myFunction() {
-    var age, voteable;
-    var mydate= new Date();
-    age = document.getElementById("age").value;
-    voteable = (age < 18) ? "Too young":"Old enough";
-    
-    
-    var mymonth=Number(mydate.getMonth())+1;
-    document.getElementById("demo4").innerHTML = "<b>" + voteable + " to vote.</b> " + (mymonth);
-  }
-</script>
+        <p>What is your name?</p>
+        <input id="Name" value="noname" />
+        <button onclick="detectname()">Check name</button>
+        <p id="demo5"><font color=grey>This content will be replaced</font></p>
+        <script>
+            function detectname() {
+                var yourname;
+                yourname = document.getElementById("Name").value == "John" ? "Yes" : "No";
+                document.getElementById("demo5").innerHTML = "<b>" + yourname + " is you.</b>";
+            }
+        </script>
 
 
 
+        <p>Input your age and click the button [default:40]:</p>
+        Enter your age: 
+        <input type="number" id="age" value="40" />years old <button onclick="myFunction()">check age</button>
+        <p id="demo4"><font color=grey>This content will be replaced</font></p>
+        <script>
+            function myFunction() {
+                var age, voteable;
+                var mydate = new Date();
+                age = document.getElementById("age").value;
+                voteable = (age < 18) ? "Too young" : "Old enough";
+
+
+                var mymonth = Number(mydate.getMonth()) + 1;
+                document.getElementById("demo4").innerHTML = "<b>" + voteable + " to vote.</b> " + (mymonth);  //display the month of a date
+            }
+        </script>
 
 
 
- 
-<p id="demo7"></p>
+        <p id="demo7"></p>
 
-<script>
-var txt = "";
-var person = {fname:"John", lname:"Doe", age:25}; 
-var x;
-for (x in person) {
-    txt += person[x] + " ";
-}
-document.getElementById("demo7").innerHTML = txt;
-</script>
-    
-    
-    
-    
-    
-<button onmouseover="this.innerHTML=Date()">The time is--?</button>   
-
-<h1> my web page 01</h1>
-<p onclick="this.innerHTML='<b>GOOD JOB!</b>'">Click me.</p>
-<span onmouseover="this.style.color='red'">Mouse over me!</span><br>
-<button onclick="getElementById('demo2').innerHTML=Date.toDateString()">---The time is?</button>
-<p id="demo"></p>
-<p id="demo3">---new content--</p>
-
-<p id="ACBParagraph"></p>
-<p id="ACBParagraph2"> ACB2 Paragraph5</p>
-<font color=red>What's up</font>
-<p id="Showtime"> Show Time</p>
+        <script>
+            var txt = "";
+            var person = {fname: "John", lname: "Doe", age: 25};
+            var x;
+            for (x in person) {
+                txt += person[x] + " ";
+            }
+            document.getElementById("demo7").innerHTML = txt;
+        </script>
 
 
-<button type="button" onclick="myfirsyfunction()">Try me </button>
-<button type="button" onmouseover="mysecondfunction()">mouse over me to see the updated time and activate second jscript file!" </button>
-<script src="jsfile02.js"></script>
-<script src="jsfile01.js"></script>
 
 
-<script>
-var d = new Date(99,5,24);
-document.getElementById("demo").innerHTML = "---"+d.toDateString();
-document.write("<h1>Hello World!</h1><p>Have a nice day!!!!**</p>");
-</script>
+
+        <button onmouseover="this.innerHTML = Date()">The time is--?</button>   
+
+        <h1> my web page 01</h1>
+        <p onclick="this.innerHTML = '<b>GOOD JOB!</b>'">Click me.</p>
+        <span onmouseover="this.style.color = 'red'">Mouse over me!</span><br>
+        <button onclick="getElementById('demo2').innerHTML = Date.toDateString()">---The time is?</button>
+        <p id="demo"></p>
+        <p id="demo3">---new content--</p>
+
+        <p id="ACBParagraph"></p>
+        <p id="ACBParagraph2"> ACB2 Paragraph5</p>
+        <font color=red>What's up</font>
+        <p id="Showtime"> Show Time</p>
 
 
-</body>
+        <button type="button" onclick="myfirsyfunction()">Try me </button>
+        <button type="button" onmouseover="mysecondfunction()">mouse over me to see the updated time and activate second jscript file!" </button>
+        <script src="jsfile02.js"></script>
+        <script src="jsfile01.js"></script>
+
+
+        <script>
+            var d = new Date(99, 5, 24);
+            document.getElementById("demo").innerHTML = "---" + d.toDateString();
+            document.write("<h1>Hello World!</h1><p>Have a nice day!!!!**</p>");
+        </script>
+
+
+    </body>
 
 </html>
