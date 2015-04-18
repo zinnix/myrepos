@@ -1,6 +1,61 @@
 <!DOCTYPE html>
 <html>
 <body>
+
+
+<p>What is your name?</p>
+<input id="Name" value="noname" />
+<button onclick="detectname()">Check name</button>
+<p id="demo5"><font color=grey>This content will be replaced</font></p>
+<script>
+  function detectname() {
+    var yourname;
+    yourname=document.getElementById("Name").value=="John"?"Yes":"No";
+    document.getElementById("demo5").innerHTML = "<b>" + yourname + " is you.</b>";
+  }
+</script>
+
+
+
+<p>Input your age and click the button [default:40]:</p>
+Enter your age: 
+<input type="number" id="age" value="40" />years old <button onclick="myFunction()">check age</button>
+<p id="demo4"><font color=grey>This content will be replaced</font></p>
+<script>
+  function myFunction() {
+    var age, voteable;
+    var mydate= new Date();
+    age = document.getElementById("age").value;
+    voteable = (age < 18) ? "Too young":"Old enough";
+    
+    
+    var mymonth=Number(mydate.getMonth())+1;
+    document.getElementById("demo4").innerHTML = "<b>" + voteable + " to vote.</b> " + (mymonth);
+  }
+</script>
+
+
+
+
+
+
+ 
+<p id="demo7"></p>
+
+<script>
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25}; 
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+document.getElementById("demo7").innerHTML = txt;
+</script>
+    
+    
+    
+    
+    
 <button onmouseover="this.innerHTML=Date()">The time is--?</button>   
 
 <h1> my web page 01</h1>
@@ -25,7 +80,6 @@
 <script>
 var d = new Date(99,5,24);
 document.getElementById("demo").innerHTML = "---"+d.toDateString();
-
 document.write("<h1>Hello World!</h1><p>Have a nice day!!!!**</p>");
 </script>
 
