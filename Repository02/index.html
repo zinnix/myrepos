@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <body>
-
-
+ <body>
+   
+     
+     <br><font color=green><b><u>Enter numbers [0 will stop the request]:</u></b></font> 
+        <input type="number" id="numtocheck" value="" />     <button onclick="numfunction()">Submit</button>
+        <p id="demmo14"><font color=grey>This content will be replaced</font></p>
+        <script>
+            function numfunction() {
+                var avg=numtocheck; sum=numtocheck;
+                var tempnum;
+              /*  
+               do {
+                   tempnum=prompt("Enter Number");
+                   sum+=tempnum;avg++;
+               } while (tempnum!=="");
+               */
+               document.getElementById("demmo14").innerHTML = document.getElementById("numtocheck").value;   
+            }
+        </script>
+     
+     
+     
+     
+        <hr><hr><br><br><br><br><br>
+     
+     <p id="sparespace5"><font color=grey>This content will be replaced</font></p>
+    <script>
+         document.getElementById("sparespace5").innerHTML = "<b>" + "More-Information"; 
+    </script>
+    
+    <br>
         <p>What is your name?</p>
         <input id="Name" value="noname" />
         <button onclick="detectname()">Check name</button>
         <p id="demo5"><font color=grey>This content will be replaced</font></p>
         <script>
-            function detectname() {
+          function detectname() {
+                 
                 var yourname;
-                yourname = document.getElementById("Name").value == "John" ? "Yes" : "No";
+                yourname = document.getElementById("Name").value === "John" ? "Yes" : "No";
                 document.getElementById("demo5").innerHTML = "<b>" + yourname + " is you.</b>";
+                // document.write("Test Test");
             }
         </script>
-
-
+        <hr><hr><br><br>
 
         <p>Input your age and click the button [default:40]:</p>
         Enter your age: 
@@ -68,7 +97,7 @@
 
 
         <button type="button" onclick="myfirsyfunction()">Try me </button>
-        <button type="button" onmouseover="mysecondfunction()">mouse over me to see the updated time and activate second jscript file!" </button>
+        <button type="button" onmouseover="mysecondfunction()">mouse over me to see the updated time and activate second Jscript file!" </button>
         <script src="jsfile02.js"></script>
         <script src="jsfile01.js"></script>
 
