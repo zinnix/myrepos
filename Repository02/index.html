@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
  <body>
-   
-     
-     <br><font color=green><b><u>Enter numbers [0 will stop the request]:</u></b></font> 
-        <input type="number" id="numtocheck" value="" />     <button onclick="numfunction()">Submit</button>
-        <p id="demmo14"><font color=grey>This content will be replaced</font></p>
+     <button onclick="mygamefunction()">Let's Play</button>
+     <p id="game01"><font color=grey>This content will be replaced</font></p>
         <script>
-            function numfunction() {
-                var avg=numtocheck; sum=numtocheck;
-                var tempnum;
-              /*  
+            function mygamefunction() {
+                
+                var avg=0; sum=0;num=0;
+                
+              
                do {
-                   tempnum=prompt("Enter Number");
-                   sum+=tempnum;avg++;
-               } while (tempnum!=="");
-               */
-               document.getElementById("demmo14").innerHTML = document.getElementById("numtocheck").value;   
-            }
+                   num=prompt("Enter Number");
+                   if (num!=="") {
+                      sum=sum+Number(num);
+                   }
+               } while (num!="");
+               
+               document.getElementById("game01").innerHTML = "Sum of your numbers: " + sum;   
+         }  
         </script>
      
      
