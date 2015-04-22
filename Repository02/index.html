@@ -6,17 +6,24 @@
         <script>
             function mygamefunction() {
                 
-                var avg=0; sum=0;num=0;
+                var index=0; sum=0;num=0;allnums=[];
+                var i=0;mystring=" ";first=1;
                 
               
                do {
-                   num=prompt("Enter Number");
+                   num=prompt("Enter Number (press enter to finish the game)");
                    if (num!=="") {
                       sum=sum+Number(num);
-                   }
-               } while (num!="");
-               
-               document.getElementById("game01").innerHTML = "Sum of your numbers: " + sum;   
+                      allnums[index]=num;
+                      if (first===1) {
+                           mystring=num;
+                           first=0;
+                      } else
+                          mystring=mystring+","+num;
+                    } 
+                    index++;
+                } while (num!=="");
+               document.getElementById("game01").innerHTML = "Sum of your numbers: " + sum + "  and the numbers are: " + mystring;   
          }  
         </script>
      
