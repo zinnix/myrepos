@@ -1,18 +1,239 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            p {
-    text-align: center;
-    color: red;
-} 
-            </style>
+
+<head>
+  <title>This is my first big JS code</title>     
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+  -->
+    
+    
+    <script src="jsfile01.js"></script>
+    <script src="jsfile02.js"></script>
+    
+
+         
+   <link rel="stylesheet" type="text/css" href="mystyle.css">
+    
+
+   <style>
+       pp1 {
+            text-align: center;
+            color: brown;
+        } 
+        
+        pp2.uppercase {
+            text-transform: uppercase;
+        }
+        pp2.lowercase {
+            text-transform: lowercase;
+        }
+   </style>
 </head>
- <body>
+    
+<body onload="createlist()">
+  <center><h1><b><u>This is my first big JS code</u></b></h1></center>
+    
+    
+  <hr>
+  
+    <script>
+        function check_info() {
+            var username=document.getElementById('username').value;
+            var password=document.getElementById('password').value;
+            
+            if (username==="" || password==="" ) {
+                alert ('Make sure to fill both username and password fields!');
+                return false;
+            }
+            else  {
+                return true;
+            }
+        }    
+    </script>
+    <form action="submission.html" method="post" onsubmit="return check_info();">
+        username:<input type="text" name="username" id="username"/>
+        password:<input type="password" name="password" id="password" />
+        <input type="submit" value="login"/>
+    </form>
+    <hr>
+    
+    
+    
+    
+    
+      <div id="mydiv01"> 
+        Cool textbox that can adjusted dynamically!
+        Try it yourself!
+        JSON - java script object notation.       
+        Reverse Proxy - when Internet customer comes into LAN, the reverse proxy response on behalf of the LAN server
+      </div> 
+      <br>
+      <div id="divver01">
+        This is style of div driven from mystyle.css
+      </div>
+    
+     <br><b>Here are my favorite marathons:</b>
+     <br>
+     <div id="marathondiv"></div>
+     <hr>
+
+     
+     
+     
+     <!-- radio box -->
+     <script>
+        function radio_check() {
+            var shoes_yes=document.getElementById('need_shoes_yes').checked;
+            var shoes_no=document.getElementById('need_shoes_no').checked;
+            if (shoes_yes===false && shoes_no===false) {
+              alert ("you must choose if you either need or do not need shoes");
+              return false;
+            } else {
+                if (shoes_yes) {
+                    alert ("You need new shoes"); 
+                    return false;
+                }
+                else  {
+                    alert ("You do not need new shoes");
+                    return false;
+                }
+            }
+        }    
+    </script>
+    <form action="submission.html" method="post" onsubmit="return radio_check();">
+        Do you need new running shoes?
+        Yes<input type="radio" name="need_shoes" id="need_shoes_yes" value="yes"/>
+        No<input type="radio" name="need_shoes" id="need_shoes_no" value="no"/>
+        <input type="submit" value="submit"/>
+    </form>
+    <hr>
+     
+     
+     
+     
+    <!-- checkbox -->
+    <script>
+        function checkbox_check() {
+            var Paris=document.getElementById('Paris').checked;
+            var NewYork=document.getElementById('NewYork').checked;
+            var London=document.getElementById('London').checked;
+            document.getElementById("marathon_status").innerHTML="Paris " + Paris + "; New York " + NewYork + "; London " + London;
+            return false;
+        }
+    </script>
+    <form action="submission.html" method="post" onsubmit="return checkbox_check();">
+        <u><b>Choose your preferred marathons:</b></u><br>
+        <input type="checkbox" name="marathons:" id="Paris" value="Paris"/>Paris<br>
+        <input type="checkbox" name="marathons:" id="NewYork" value="NewYork"/>New York<br>
+        <input type="checkbox" name="marathons:" id="London" value="London"/>London<br>
+        <input type="submit" value="submit"/>
+    </form>
+    <p id="marathon_status"><font color=grey></font></p>
+    <hr> 
+     
+     
+     
+     
+     
+     <p>This text is black, except for the word <span style="color:red">red</span>!</p>
+     <p>My dog has <span style="color:blue">blue</span> eyes.</p>
+	
 
 
-     <button onclick="mygamefunction()">Let's Play</button>
-     <p id="game01"><font color=grey>This content will be replaced</font></p>
+    <!-- A form based on html to choose color -->
+    <!-- ****Why type=color doesn't work -->
+    Choose Color: <input type="date" id="color01">
+    <button onclick="replycolor()">Submit</button><p id="colorp01"></p>
+    <script>
+        function replycolor() {
+            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var chosencolor= document.getElementById("color01").value;
+            var d = new Date();
+            document.getElementById("colorp01").innerHTML = chosencolor +" and the current month is <b>" + monthNames[d.getMonth()]+"</b>"; 
+            //document.write("chosencolor");
+            
+            
+        }
+    </script>
+     
+
+
+
+
+
+    <font color=green>Enter Your name: </font><input id="yourname" value="<Your Name>"/>
+    <button onclick="PrintName()" value="Done">Submit</button>
+    <p id="name01"><font color=grey>This content will be replaced(00)</font></p>
+
+    <script>
+        function PrintName() {
+            document.getElementById("name01").innerHTML="Hello <b>" + document.getElementById("yourname").value+"<b> :-)"; 
+        }
+    </script>
+
+
+
+
+
+
+
+    
+    Enter First Number: <input id="firstnum" value=3 />
+    Enter Second Number: <input id="secondnum" value=35 />
+    Enter Divider number: <input id="divider" value=4 />
+    <button onclick="Calculatediv()">List numbers</button>
+    <p id="game01"><font color=grey>This content will be replaced(01)</font></p>
+    <script>
+        function Calculatediv() {
+                var index=0; sum=0;num=0;allnums=[];
+                var i = 0; mystring = " "; first = 1;
+                firstnum01 = Number(document.getElementById("firstnum").value);
+                secondnum01 = Number(document.getElementById("secondnum").value);
+                divider01 = Number(document.getElementById("divider").value);               
+                for (i=firstnum01;i<secondnum01;i++) {                
+                    if (i % divider01===0) {
+                        mystring+=" , "+i;
+                    }
+                }
+               document.getElementById("game01").innerHTML = "<u>All numbers from <b>" + firstnum01 +"</b> to <b> " + secondnum01 + "</b> that are divisible by <b>" + divider01 + ":</b></u><br>"+ mystring;
+         }
+    </script>
+
+
+
+     <h3>JavaScript can Validate Input</h3>
+     Please input a number between 1 and 10:
+     <input id="argument01" type="number">
+     <button type="button" onclick="function01()">Submit</button>
+     <p id="demo14"><font color=grey>This will be replaced once you place number 1-10</font></p>
+
+     <script>
+        function function01() {
+            var x, text;
+
+            // Get the value of the input field with id="argument01"
+            x = document.getElementById("argument01").value;
+
+            // If x is Not a Number or less than one or greater than 10
+            if (isNaN(x) || x < 1 || x > 10) {
+                text = "Input not valid";
+            } else {
+                text = "Input OK";
+            }
+            document.getElementById("demo14").innerHTML = "<b>"+text+"</b>";
+        }
+    </script>
+
+
+   
+
+     <br><br><button onclick="mygamefunction()">Let's Play</button>
+     <p id="game04"><font color=grey>This content will be replaced (02)</font></p>
         <script>
             function mygamefunction() {
                 
@@ -26,29 +247,22 @@
                       sum=sum+Number(num);
                       allnums[index]=num;
                       if (first===1) {
-                           mystring=num;
+                           mystring=Number(Number(index)+1)+") "+ num;
                            first=0;
                       } else
-                          mystring=mystring+","+num;
+                          mystring=mystring+"<br>"+Number(Number(index)+1)+") " + num;
                     } 
                     index++;
                 } while (num!=="");
-               document.getElementById("game01").innerHTML = "Sum of your numbers: " + sum + "  and the numbers are: " + mystring;   
+               document.getElementById("game04").innerHTML = "Sum of your numbers: <b>" + sum + "</b>  and the numbers are: <br>" + mystring;   
          }  
         </script>
      
      
      
      
-        <hr><hr><br><br><br><br><br>
-     
-     <p id="sparespace5"><font color=grey>This content will be replaced</font></p>
-    <script>
-         document.getElementById("sparespace5").innerHTML = "<b>" + "More-Information"; 
-    </script>
-    
-    <br>
-        <p>What is your name?</p>
+        <hr><hr>
+        <pp1>What is your name?</pp1>
         <input id="Name" value="noname" />
         <button onclick="detectname()">Check name</button>
         <p id="demo5"><font color=grey>This content will be replaced</font></p>
@@ -74,9 +288,7 @@
                 age = document.getElementById("age").value;
                 voteable = (age < 18) ? "Too young" : "Old enough";
 
-
-                var mymonth = Number(mydate.getMonth()) + 1;
-                document.getElementById("demo4").innerHTML = "<b>" + voteable + " to vote.</b> " + (mymonth);  //display the month of a date
+                document.getElementById("demo4").innerHTML = "<b>" + voteable + " to vote.</b>";
             }
         </script>
 
@@ -98,13 +310,12 @@
 
 
 
-        <button onmouseover="this.innerHTML = Date()">The time is--?</button>   
+        <button onmouseover="this.innerHTML = Date()">The time is 01--?</button>   
 
-        <h1> my web page 01</h1>
         <p onclick="this.innerHTML = '<b>GOOD JOB!</b>'">Click me.</p>
         <span onmouseover="this.style.color = 'red'">Mouse over me!</span><br>
-        <button onclick="getElementById('demo2').innerHTML = Date.toDateString()">---The time is?</button>
-        <p id="demo"></p>
+        
+        
         <p id="demo3">---new content--</p>
 
         <p id="ACBParagraph"></p>
@@ -113,17 +324,72 @@
         <p id="Showtime"> Show Time</p>
 
 
-        <button type="button" onclick="myfirsyfunction()">Try me </button>
-        <button type="button" onmouseover="mysecondfunction()">mouse over me to see the updated time and activate second Jscript file!" </button>
-        <script src="jsfile02.js"></script>
-        <script src="jsfile01.js"></script>
 
 
         <script>
-            var d = new Date(99, 5, 24);
-            document.getElementById("demo").innerHTML = "---" + d.toDateString();
-            document.write("<h1>Hello World!</h1><p>Have a nice day!!!!**</p>");
+            function mysecondfunction()  /* comment */
+            {
+
+                var index,text="";
+                var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                for	(index = 0; index < fruits.length; index++) {
+                    text += fruits[index]+" ";        
+                }
+                document.write("<h1>Hello World!</h1><p>Have a nice day!</p>--"+text+"--");
+                document.write("<br>Bye Bye!!");
+                document.getElementById("Showtime").innerHTML = "<b>Date is:</b> ";// + Date();
+
+                var str = "Please locate where 'locate' occurs!";
+                var pos = str.indexOf("locate");
+
+                //document.getElementById("demo3").innerHTML ="<b><font color=blue>";
+            }
         </script>
+
+
+
+
+
+        
+        <button type="button" onclick="myfirstfunction()">Try me </button>
+        <button type="button" onmouseover="mysecondfunction()">mouse over me to see the updated time and activate second Jscript file! </button>
+
+        
+
+
+
+
+
+        <p id="demo"></p>
+        <script>
+            var d = new Date(99, 5, 24);
+            document.getElementById("demo").innerHTML = "++++" + d.toDateString();
+            document.write("<h1>Hello World!</h1>Have a nice day!!!!**");
+        </script>
+        <hr><hr>
+
+
+        
+
+
+
+
+        <br>
+         <form name="first_form">
+            <input type="text" name="first_text" size="40" value="Power to the primates!">
+         </form>
+
+        <form name="first_form">
+            <input type="text" name="first_text" value="Are you happy?">
+        </form>
+        <a href="#" onMouseOver="window.document.first_form.first_text.value='Clap clap!';">Yes, and I know it.</a>
+        <a href="#" onMouseOver="window.document.first_form.first_text.value='Sour puss!';">No!</a>
+
+
+
+
+
+
 
 </body>
 </html>

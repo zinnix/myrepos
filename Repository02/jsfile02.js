@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-function mysecondfunction()  /* comment */
+function mysecondfunction1()  /* comment */
 {
 
     var index,text="";
@@ -13,12 +13,12 @@ function mysecondfunction()  /* comment */
     }
     document.write("<h1>Hello World!</h1><p>Have a nice day!</p>--"+text+"--");
     document.write("<br>Bye Bye!!");
-    document.getElementById("Showtime").innerHTML = "<b>Date is:</b> " + Date();
+    document.getElementById("Showtime").innerHTML = "<b>Date is:</b> ";// + Date();
   
     var str = "Please locate where 'locate' occurs!";
     var pos = str.indexOf("locate");
 
-    document.getElementById("demo3").innerHTML ="<b><font color=blue>" +pos+"</b></font>";
+    //document.getElementById("demo3").innerHTML ="<b><font color=blue>";
     
           
 
