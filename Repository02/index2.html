@@ -7,27 +7,29 @@
 <p>Please input a number between 1 and 10:</p>
 
 <input id="argument01" type="number">
-
 <button type="button" onclick="function01()">Submit</button>
 
 <p id="demo"></p>
  
 <script>
-function function01() {
-    var x, text;
+    function function01() {
+        var x, text;
 
-    // Get the value of the input field with id="argument01"
-    x = document.getElementById("argument01").value;
+        // Get the value of the input field with id="argument01"
+        x = document.getElementById("argument01").value;
 
-    // If x is Not a Number or less than one or greater than 10
-    if (isNaN(x) || x < 1 || x > 10) {
-        text = "Input not valid";
-    } else {
-        text = "Input OK";
+        // If x is Not a Number or less than one or greater than 10
+        if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+        } else {
+            text = "Input OK";
+        }
+        document.getElementById("demo").innerHTML = text+" Hello";
     }
-    document.getElementById("demo").innerHTML = text+" Hello";
-}
 </script>
 
+    
+    
+    
 </body>
 </html> 

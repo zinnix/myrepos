@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -11,15 +11,37 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
-         <script src="jquery01.js"></script>
+        <script src="jquery01.js"></script>
+        <style type="text/css">
+            .shrink {font-size: 20px;}
+            .emphasis {text-decoration: underline; color:red;}
+            .bobo {font-style: italic;}
+        </style>
+        <style type="text/css">
+            div {background-color: yellow;}            
+        </style>
     </head>
     <body>
         <div>TODO write content</div>
-          
-        <!-- JQuery -->  
-        <h1>Heading one-four</h1>
-       <p>This is just some text for heading 1</p>
+        <input id="testbutton" type="button" value="test" />
+        <div>
+            <p>this is the <strong>first</strong> line of text</p>
+            <p>this is the <strong>second</strong> line of text</p>
+        </div> 
+        <p>This is a nother line of dummy text</p>
+        <p>This is just some text for heading 1</p>
+        <h1>Heading one</h1>
+        <h2>Heading Two</h2>
+        <h3>Heading Three will manipulate H4</h3>
+        <h4>Heading Four</h4>
+        <h5>Heading Five - when you click me, "This is p5" will be changes</h5>
+        <p5><font color=blue>This is p5</font></p5>
+        <hr></hr>
+        <p6>Click me and it will display nice picture</p6>
+        <hr></hr>
+        <p7>This is the 7th P, and I will play with the colors; Click me and get a surprise!</p7>
+        <img id="picture" source="DSCF8181.JPG" />
         
-        
+        <h1 class="shrink emphasis bobo">heading one</h1>
     </body>
 </html>

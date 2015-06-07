@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>AJAX demo file</title>
+    <script language="javascript" type="text/javascript" >
+        xmlhttp = new XMLhttpRequest();
+
+        function getScores() {
+            xmlhttp.onreadystatechange =
+            function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById('scores').innerHTML = xmlhttp.responseText;
+                }
+                else {
+                    document.getElementById('scores').innerHTML = '<strong>Waiting for Server response....</strong>';
+                }
+            }
+
+            xmlhttp.open("GET", "http://www.learntoprogram.tv/baseball.php", true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <div id="scores"></div>
+    <br /><input type="button" value="Get Scores" onclick="getScores()"/>
+</body>
+</html>

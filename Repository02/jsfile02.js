@@ -3,6 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+var x=2+2*2, c=5, d=23;
+x=c=d;
+console.log(x);
+console.log(3<4<-5);
+console.log(x+"-"+c+"-"+d);
 function mysecondfunction1()  /* comment */
 {
 
